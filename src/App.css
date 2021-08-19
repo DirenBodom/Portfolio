@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+#sidebar-wrapper{
+  z-index: 1;
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  overflow-y: hidden;
+  background: #2C3E50;
+  opacity: 0.9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#page-content {
+  width: 95%;
+  height: 100%;
+  margin-left:5%;
+  position: absolute;
+  padding: 15px;
+  /* border: 5px solid green; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Change the sidebar to display it */
+#wrapper.menuDisplayed #sidebar-wrapper{
+  width: 250px;
+}
+#wrapper.menuDisplayed #menu-toggle{
+  width: 14em;
+}
+#wrapper.menuDisplayed #page-content{
+  padding-left: 250px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.sidebar-nav{
+  padding: 10px;
+  list-style: none;
+}
+.sidebar-nav li{
+  text-indent: 20px;
+  line-height: 40px;
+  padding-top: 2em;
+} 
+.menu-icon{
+  display: block;
+  height: 3em;
+  width: 3em;
+  filter: invert(87%) sepia(24%) saturate(410%) hue-rotate(109deg) brightness(104%) contrast(104%);
+}
+.sidebar-nav li a{
+  display: block;
+  text-decoration: none;
+  color: #ddd;
+}
+.sidebar-nav li a:hover{
+  background: #0d6e66;
+}
+
+fieldset {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 25px;
+  padding: 25px;
+  border: 3px #007c82 solid;
+  border-radius: 15px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style-type: circle;
 }
